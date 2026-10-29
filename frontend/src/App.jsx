@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Check, Circle, ClipboardList, Clock3, Edit3, ListTodo, Plus, Search, Trash2, X } from 'lucide-react';
 
-const API = 'http://localhost:8081/api/tasks';
+
+const API = `${import.meta.env.VITE_API_URL}/api/tasks`;
+
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
